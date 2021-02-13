@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSOC Tagger</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+    <link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">
+
+    <script src="{{url_for('static', filename='app.js')}}"></script>
+</head>
+
+<body>
+    <div class="head">GSOC Tagger</div>
+    <br>
+    <div class="container">
+        <div class="tag">
+            <form action="post" onsubmit="searchtags(event)" id="frm1">
+
+                <label for="selectpicker">Technology: </label>
+                <select name="tags" id="selectpicker multiselect1" class="selectpicker" data-live-search="true" required multiple="multiple">
+                    {% for tag in tags %}
+                        <option value={{tag}}>{{tag}}</option>
+                    {% endfor %}
+                </select>
+
+                <button type="submit" class="btn btn-success">Search</button>
+            </form>
+        </div>
+
+        <br> 
+        <div style="display: none" >
+            Search Results:
+            <div id="result" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" style="margin:auto;">
+
+            </div>    
+            <hr>
+            <br>
+            <br>
+        </div>
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" style="margin:auto;">
+            {% for item in data %}
+            {% if item[1]!="Name" %}
+            
+            <div class="col mb-4">
+                <div class="card text-center" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{item[1]}}</h5>
+                        <p class="card-text">{{item[2]}}</p>
+
+                        {% for tag in item[4].strip("] [ ' ").split("', '") %}
+                            <span class="badge badge-warning">{{tag}}</span>
+                        {% endfor %}
+                        <br>
+                        <br>
+                        <a target=”_blank” href="{{item[3]}}" class="btn btn-primary">Webpage</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+        </div>
+    </div>
+</body>
+
+</html>

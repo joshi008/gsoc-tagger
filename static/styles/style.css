@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+}
+
+.head {
+    width: 100%;
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-family: 'Fredoka One', cursive;
+    color: white;
+    text-shadow: 1px 1px 5px #7c2aff;
+    background-image: radial-gradient(circle, #69ffac, #8bff9f, #a8ff94, #c1ff8b, #d9ff85);
+    /* background-color: #a4508b;
+    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%); */
+}
+
+.tag {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 1rem;
+    
+}
+
+
+@media (max-width: 576px) {  
+    .xs {color:red;font-weight:bold;}
+  }
+  
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width:768px) {  
+    .sm {color:red;font-weight:bold;}
+  }
+   
+  /* Medium devices (tablets, 768px and up) The navbar toggle appears at this breakpoint */
+  @media (min-width: 768px) and (max-width:992px) {  
+   .md {color:red;font-weight:bold;}
+  }
+   
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width:1200px) { 
+   .lg {color:red;font-weight:bold;}
+  }
+   
+  /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) {  
+      .xl {color:red;font-weight:bold;}
+  }
+   
+
+  .band {
+    width: 90%;
+    max-width: 1240px;
+    margin: 0 auto;
+    
+    display: grid;
+    
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    
+  }
+  
+  .card:hover {
+    top: -2px;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.2);
+  }
+
+  
+.card {
+    min-height: 100%;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: #444;
+    position: relative;
+    top: 0;
+    transition: all .1s ease-in;
+    margin:auto;
+  }
