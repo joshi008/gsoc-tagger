@@ -21,31 +21,47 @@
 
     <script src="{{url_for('static', filename='app.js')}}"></script>
 </head>
+<!-- onsubmit="searchtags(event)" -->
 
 <body>
     <div class="head">GSOC Tagger</div>
     <br>
     <div class="container">
         <div class="tag">
-            <form action="post" onsubmit="searchtags(event)" id="frm1">
+            <form action="" method="post" id="frm1">
 
                 <label for="selectpicker">Technology: </label>
-                <select name="tags" id="selectpicker multiselect1" class="selectpicker" data-live-search="true" required multiple="multiple">
+                <select name="tags" id="selectpicker multiselect1" class="selectpicker" data-live-search="true"
+                    multiple="multiple">
+
+                    <option value="all" selected>all</option>
                     {% for tag in tags %}
-                        <option value={{tag}}>{{tag}}</option>
+                    <option value={{tag}}>{{tag}}</option>
                     {% endfor %}
                 </select>
+
+
+
+                <span class="form-group">
+                    <label for="year">Select Year:</label>
+                    <select class="" id="year" name="year">
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                    </select>
+                </span>
 
                 <button type="submit" class="btn btn-success">Search</button>
             </form>
         </div>
 
-        <br> 
-        <div style="display: none" >
+        <br>
+        <div style="display: none">
             Search Results:
-            <div id="result" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" style="margin:auto;">
+            <div id="result" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5"
+                style="margin:auto;">
 
-            </div>    
+            </div>
             <hr>
             <br>
             <br>
@@ -53,20 +69,20 @@
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" style="margin:auto;">
             {% for item in data %}
-            {% if item[1]!="Name" %}
-            
+            {% if item.Name!="Name" %}
+
             <div class="col mb-4">
                 <div class="card text-center" style="width: 18rem;">
                     <div class="card-body">
-                        <h5 class="card-title">{{item[1]}}</h5>
-                        <p class="card-text">{{item[2]}}</p>
+                        <h5 class="card-title">{{item.Name}}</h5>
+                        <p class="card-text">{{item.Description}}</p>
 
-                        {% for tag in item[4].strip("] [ ' ").split("', '") %}
-                            <span class="badge badge-warning">{{tag}}</span>
+                        {% for tag in item.Tags.strip("] [ ' ").split("', '") %}
+                        <span class="badge badge-warning">{{tag}}</span>
                         {% endfor %}
                         <br>
                         <br>
-                        <a target=”_blank” href="{{item[3]}}" class="btn btn-primary">Webpage</a>
+                        <a target=”_blank” href="{{item.Link}}" class="btn btn-primary">Webpage</a>
                     </div>
                 </div>
             </div>
