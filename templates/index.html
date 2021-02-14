@@ -28,13 +28,13 @@
     <br>
     <div class="container">
         <div class="tag">
-            <form action="" method="post" id="frm1">
+            <form action="" method="post" id="frm1" onsubmit="submit(event)">
 
                 <label for="selectpicker">Technology: </label>
                 <select name="tags" id="selectpicker multiselect1" class="selectpicker" data-live-search="true"
                     multiple="multiple">
 
-                    <option value="all" selected>all</option>
+                    <option value="all">all</option>
                     {% for tag in tags %}
                     <option value={{tag}}>{{tag}}</option>
                     {% endfor %}
@@ -43,13 +43,18 @@
                 <span class="form-group">
                     <label for="year">Select Year:</label>
                     <select class="" id="year" name="year">
+                        <option value="2020" defaut>Year</option>
                         <option value="2020">2020</option>
                         <option value="2019">2019</option>
                         <option value="2018">2018</option>
                     </select>
                 </span>
 
-                <button type="submit" class="btn btn-success">Search</button>
+                <span class="justify-content-end">
+                    <button class="btn btn-info" disabled>{{year}}</button>
+
+                    <button type="submit" class="btn btn-success float-end">Search</button>
+                </span>
             </form>
         </div>
 
@@ -66,6 +71,13 @@
         </div>
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5" style="margin:auto;">
+            {% if count|int()==0 %}
+            <br><br><br>
+            <center>
+                <h4>No organisations found :( </h4>
+            </center>
+            {% endif %}
+
             {% for item in data %}
             {% if item.Name!="Name" %}
 

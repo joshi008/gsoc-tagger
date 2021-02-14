@@ -33,18 +33,16 @@ def check(string, sub_str):
     else: 
         return True
 
-
-yeartag = tag2018 + tag2020 + tag2019 
-
+yeartag = ['advanced data structures', 'ai', 'android', 'android/ios', 'angular', 'angularjs', 'ansible', 'antlr', 'apache kafka', 'appengine', 'arduino', 'artificial intelligence', 'asm', 'assembly', 'audio', 'awk', 'bash', 'big data', 'blender', 'boinc', 'boost', 'bpm', 'browser extension', 'bsd make', 'bsd unix', 'c', 'c#', 'c++', 'c++11', 'c++14', 'c++17', 'c/c++', 'cad', 'cakephp', 'cassandra', 'ceph', 'chisel', 'clojure', 'cloud', 'cmake', 'cms', 'codecs', 'communication protocol', 'compression', 'computer vision', 'content management system', 'cpp', 'crossplatform', 'css', 'css/html', 'css3', 'cuda', 'cups', 'cython', 'céu', 'd', 'd3', 'd3.js', 'dask', 'data analysis', 'database', 'databases', 'datproject', 'ddos', 'deep learning', 'dhcp', 'directx', 'distributed systems', 'django', 'docker', 'dpdk', 'drones', 'eclipse', 'elasticsearch', 'electron', 'elk', 'embedded', 'emberjs', 'erlang', 'espresso', 'ffmpeg', 'firmware', 'flask', 'fonts', 'fortran', 'fpga', 'framework', 'frontend', 'fsts', 'gazebo', 'gcc', 'git', 'github', 'gnss', 'gnu autotools', 'gnu make', 'gnupg', 'go', 'gobject', 'golang', 'graphql', 'groovy', 'grpc', 'gtk', 'gtk+', 'hadoop', 'hardware acceleration', 'haskell', 'hg', 'html', 'html/javascript', 'html5', 'html5/css3', 'hydra', 'hypervisor', 'ice - zeroc', 'ionic', 'ios', 'iot', 'ipp', 'isabelle proof assistant', 'isl', 'java', 'java script', 'javacc', 'javascript', 'javascript/html5/css3', 'jquery', 'jruby', 'json', 'json/json-ld', 'julia', 'jupyter', 'jvm', 'kubernetes', 'kvm', 'lamp', 'linux', 'linux kernel', 'lisp', 'llvm', 'lua', 'lxc', 'machine learning', 'macos', 'make', 'mariadb', 'matlab', 'meteor.js', 'microservices', 'middleware', 'midi', 'mongodb', 'music', 'mysql', 'net', 'nltk', 'node', 'node.js', 'numba', 'object-oriented', 'ocaml', 'opencl', 'opencv', 'opengl', 'openmp', 'openscenegraph', 'opentracing', 'openvpn', 'openwrt', 'ordbms', 'parallelization', 'perl', 'php', 'php/javascript/ajax', 'php/javascript/html', 'physical computing', 'polly', 'posix', 'postgis', 'postgresql', 'ppcg', 'prometheus', 'pthon', 'pyth', 'python', 'python 3', 'qemu', 'qml', 'qt', 'r', 'r-project', 'rails', 'rdbms', 'rdf', 'react', 'react native', 'react.js', 'reactjs', 'real-time', 'redis', 'redux', 'remote access', 'rest', 'robotics', 'ros', 'rspec', 'ruby', 'ruby on rail', 'ruby on rails', 'rust', 'scala', 'scikit-learn', 'scilab', 'scripting', 'sdl', 'shell script', 'simd', 'singularity', 'smt', 'sockets', 'spark', 'sparql', 'sphinx', 'spring', 'sql', 'standards', 'svg', 'swift', 'swig', 'symfony', 'syntaxnet', 'synthesis', 'tcl', 'tcl/tk', 'tcp', 'tensorflow', 'tla+', 'twisted', 'typescript', 'unicode', 'unix', 'unreal engine', 'va-api', 'velocity', 'verilog', 'vhdl', 'video', 'vim', 'vue.js', 'vulkan', 'wayland', 'web', 'web development', 'web/html/css', 'webassembly', 'webcomponents', 'webgl', 'webkit', 'webrtc', 'webs', 'wiki', 'win32', 'windows', 'x11', 'xarray', 'xen', 'xia', 'xml', 'xmpp', 'xpath', 'xtext', 'yocto', '.net', 'apis', 'arm', 'asr', 'aws', 'beam', 'bootstrap', 'buildbot', 'c99', 'cabal', 'canvas', 'chapel', 'chatbots', 'che', 'ci/cd', 'cifs', 'clang', 'codeworld', 'compiler', 'component-based development', 'concurrency', 'coq', 'dart', 'data science', 'devops', 'differential privacy', 'drupal 8', 'eclipsejavaide', 'elixir', 'federated learning', 'flutter', 'fuzzing', 'game development', 'ghc', 'gis', 'google web toolkit', 'gradle', 'grafana', 'graphite', 'gstreamer', 'gtkmm', 'high performance computing', 'homomorphic encryption', 'honeypot', 'hpc', 'hpx', 'iaccessible2', 'irc', 'jakartaee', 'javafx', 'javajava', 'jenkins', 'jinja2', 'jni', 'jsonnet', 'julialang', 'junit', 'jupyter notebook', 'kafka', 'kibana', 'kotlin', 'kustomize', 'lfe', 'libusb', 'libuv', 'libxcam', 'linkerd', 'linux distribution', 'lunatik', 'lwgjl', 'mapping', 'medical imaging', 'ml', 'mlir', 'mobile', 'neo4j', 'networking', 'nlp', 'nodejs', 'nt', 'numpy', 'open source databases', 'pallene', 'pcap', 'postgres', 'programming-language', 'pygame', 'raspberry pi', 'reactnative', 'risc-v', 'rpc', 'rpm', 'sanitizers', 'scheme', 'screwdriver', 'sdr', 'secure multi-party computation', 'servant', 'service mesh', 'shell', 'smb', 'solr', 'sound open firmware', 'space applications', 'spinnaker', 'sqlite', 'systemverilog', 'tekton', 'templates', 'terminal-kit', 'terraform', 'twig', 'ui automation', 'vaapi', 'vala', 'virtualization', 'vue', 'webpack', 'win32 api', 'wordpress', 'x86', 'a-frame', 'apache spark', 'app engine', 'assembler', 'asynchronous i/o', 'automaton', 'automotive', 'bazel', 'biojs', 'bsd', 'bytecode', 'c++ libraries c++11 c++14 c++17 c++20', 'compilers', 'containers', 'dlang', 'documentation', 'elasicsearch', 'email', 'gdal', 'gdscript', 'google app engine', 'gwt', 'htc vive', 'html/css', 'html/css/js', 'html5 canvas', 'ide', 'influxdb', 'jakarta', 'kconfig', 'kernel', 'latex', 'lwjgl', 'maps api', 'mpi', 'nss', 'open-sound-control', 'openapi', 'openj9', 'operating systems', 'operator', 'os', 'osx', 'patroni', 'perl5', 'perl6', 'pharo', 'programming languages', 'protocol buffers', 'qt5', 'regular expressions', 'search', 'selenium', 'server', 'skala', 'smalltalk', 'some/ip', 'spir-v', 'squeak', 'tokio_rs', 'vega', 'vega-lite', 'voctomix', 'web apps', 'webasssembly', 'xilinx']
+yeartag.sort()
 
 @gsocTags.route('/',methods = ['POST', 'GET'])
 def home():
+    count=0
     if request.method == 'POST':
         year = request.form['year']
         
         tags = request.form.getlist('tags')
-        print(year)
-        print(tags)
         if(year!=""):
             result = collection.find({"Year":year})
             org = []
@@ -52,21 +50,24 @@ def home():
                 if( 'all' not in tags):
                     checkc=False
                     for tag in tags:
-                        print(res)
                         if(check(res['Tags'], tag)):
                             checkc=True 
                     if(checkc):
                         org.append(res)
+                        count+=1
                 else:
                     org.append(res)
-            return render_template('index.html', data=org, tags=yeartag)
-        return render_template('index.html',data=[],tags=yeartag)
+                    count+=1
+            return render_template('index.html', data=org, tags=yeartag, year=year,count=count)
+        return render_template('index.html',data=[],tags=yeartag, year=year, count=count)
     else:
         result = collection.find({"Year":"2020"})
+        year="2020"
         org = []
         for res in result:
             org.append(res)
-        return render_template('index.html',data=org,tags=yeartag)
+            count+=1
+        return render_template('index.html',data=org,tags=yeartag, year=year, count=count)
 
 @gsocTags.route('/2020')
 def gsoc2020fun():

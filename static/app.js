@@ -44,4 +44,8 @@ function searchtags(f) {
 
     res.parentElement.style.display = "block";
     console.log(cards)
-}   
+}
+
+function submit(event) {
+    event.preventDefault();
+}
