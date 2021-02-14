@@ -26,13 +26,16 @@ tag2019.sort()
 tag2018 = ['unreal engine', 'xmpp', 'middleware', 'matlab', 'bsd make', 'hydra', 'linux kernel', 'xpath', 'c++', 'distributed systems', 'gazebo', 'scikit-learn', 'big data', 'symfony', 'meteor.js', 'data analysis', 'cpp', 'python', 'smt', 'cms', 'css3', 'gtk', 'electron', 'machine learning', 'css', 'artificial intelligence', 'fonts', 'r', 'communication protocol', 'gnupg', 'polly', 'opentracing', 'synthesis', 'qemu', 'flask', 'simd', 'spring', 'ffmpeg', 'lua', 'kvm', 'tla+', 'arduino', 'apache kafka', 'graphql', 'tensorflow', 'elasticsearch', 'postgresql', 'rdf', 'opencv', 'ruby on rails', 'd', 'wayland', 'music', 'qml', 'mongodb', 'opengl', 'standards', 'singularity', 'git', 'net', 'nltk', 'javascript/html5/css3', 'php/javascript/html', 'xtext', 'assembly', 'openscenegraph', 'gcc', 'django', 'php', 'compression', 'cloud', 'sockets', 'xia', 'crossplatform', 'webassembly', 'pyth', 'mysql', 'parallelization', 'tcl/tk', 'cython', 'bsd unix', 'grpc', 'javascript', 'javacc', 'xarray', 'cups', 'java', 'd3.js', 'docker', 'webgl', 'object-oriented', 'cad', 'c++17', 'hypervisor', 'c/c++', 'erlang', 'gtk+', 'vim', 'audio', 'golang', 'vhdl', 'prometheus', 'angular', 'webcomponents', 'llvm', 'ocaml', 'reactjs', 'velocity', 'groovy', 'lisp', 'webs', 'robotics', 'ansible', 'posix', 'databases', 'ppcg', 'scilab', 'gnu autotools', 'rails', 'html5', 'scripting', 'browser extension', 'tcp', 'ipp', 'react native', 'node.js', 'video', 'numba', 'jvm', 'postgis', 'python 3', 'computer vision', 'redux', 'ice - zeroc', 'win32', 'hadoop', 'espresso', 'wiki', 'angularjs', 'gobject', 'unix', 'blender', 'isl', 'fsts', 'dpdk', 'directx', 'remote access', 'lxc', 'sparql', 'bash', 'web', 'ddos', 'dask', 'android/ios', 'syntaxnet', 'embedded', 'ceph', 'rspec', 'jupyter', 'haskell', 'hg', 'html5/css3', 'ruby on rail', 'r-project', 'react.js', 'fpga', 'macos', 'elk', 'microservices', 'go', 'html/javascript', 'php/javascript/ajax', 'kubernetes', 'boost', 'ruby', 'rest', 'verilog', 'iot', 'tcl', 'midi', 'advanced data structures', 'physical computing', 'boinc', 'scala', 'isabelle proof assistant', 'cuda', 'c++11', 'content management system', 'opencl', 'rust', 'x11', 'pthon', 'node', 'swig', 'xml', 'jruby', 'asm', 'qt', 'github', 'ios', 'shell script', 'openwrt', 'linux', 'twisted', 'awk', 'cmake', 'mariadb', 'ai', 'lamp', 'yocto', 'xen', 'julia', 'deep learning', 'fortran', 'eclipse', 'spark', 'make', 'sphinx', 'c++14', 'ordbms', 'webkit', 'c', 'sdl', 'gnu make', 'react', 'chisel', 'ros', 'java script', 'frontend', 'svg', 'céu', 'android', 'codecs', 'unicode', 'ionic', 'c#', 'openmp', 'vue.js', 'framework', 'vulkan', 'drones', 'windows', 'rdbms', 'd3', 'datproject', 'bpm', 'web/html/css', 'sql', 'html', 'cakephp', 'dhcp', 'jquery', 'openvpn', 'database', 'json/json-ld', 'web development', 'antlr', 'json', 'cassandra', 'firmware', 'css/html', 'perl', 'hardware acceleration', 'real-time', 'webrtc', 'va-api', 'clojure', 'appengine', 'typescript', 'gnss', 'emberjs', 'swift', 'redis']
 tag2018.sort()
 
+
 def check(string, sub_str): 
     if (string.find(sub_str) == -1): 
         return False 
     else: 
         return True
 
+
 yeartag = tag2018 + tag2020 + tag2019 
+
 
 @gsocTags.route('/',methods = ['POST', 'GET'])
 def home():
