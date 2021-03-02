@@ -12,3 +12,6 @@ Then start the app by:
 ```
 python app.py
 ```
+
+
+[![Stargazers repo roster for @joshi008/gsoc-tagger](https://reporoster.com/stars/joshi008/gsoc-tagger)](https://github.com/joshi008/gsoc-tagger/stargazers)
