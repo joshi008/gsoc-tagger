@@ -48,7 +48,7 @@ def home():
 
         tags = request.form.getlist('tags')
         if(year != ""):
-            result = collection.find({"Year": year})
+            result = collection.find({"Year":year})
             org = []
 
             if('all' not in tags):
@@ -58,11 +58,11 @@ def home():
                             org.append(res)
                 return render_template('index.html', data=org, tags=yeartag, year=year, count=len(org))
             else:
-                return render_template('index.html', data=result, tags=yeartag, year=year, count=len(result))
+                return render_template('index.html', data=result, tags=yeartag, year=year, count=result.count())
         return render_template('index.html', data=[], tags=yeartag, year=year, count=0)
     else:
-        result = collection.find({"Year": "2020"})
-        year = "2020"
+        result = collection.find({"Year": "2021"})
+        year = "2021"
         org = []
         for res in result:
             org.append(res)
