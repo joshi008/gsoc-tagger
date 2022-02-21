@@ -10,16 +10,18 @@ Tags GSOC projects/organisations according to the technology. Allows user to fil
 
 ## ⚡ QuickStart 
 
-Browse to the folder and open command prompt to 
-```
-pip install -r requirements.txt
-```
+1. Browse to the folder, open command prompt and type the following command: 
 
---------
-Then start the app by:
-```
-python app.py
-```
+    ```
+    pip install -r requirements.txt
+    ```
+
+2. Then start the app by:
+
+    ```
+    python app.py
+    ```
+
 
 ## ⭐ Star Gazers
 
