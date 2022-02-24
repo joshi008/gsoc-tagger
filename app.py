@@ -51,7 +51,8 @@ def home():
             result = collection.find({"Year":year})
             org = []
 
-            if('all' not in tags):
+            #if('all' not in tags):
+            if tags: #If tags not empty, use the list. Else, take all as default
                 for tag in tags:
                     for res in result:
                         if(tag in res['Tags']):
