@@ -32,3 +32,7 @@ Tags GSOC projects/organisations according to the technology. Allows user to fil
 ## License
 
 [MIT](https://github.com/joshi008/gsoc-tagger/blob/main/LICENSE)
+
+
+## Packages used in application
+   Flask, csv, urllib, os, flask_pymongo, pymongo
